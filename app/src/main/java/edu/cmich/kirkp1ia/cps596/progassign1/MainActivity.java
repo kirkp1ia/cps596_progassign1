@@ -62,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(TAG, "Tip: " + Arrays.toString(tipVals));
         DecimalFormat currencyFormat = new DecimalFormat(".##");
-        String tipTotalDisplay = currencyFormat.format("$" + rawTip);
-        String tipPerMemberDisplay = currencyFormat.format("$" + tipPerMember);
+        String tipTotalDisplay = currencyFormat.format(rawTip);
+        String tipPerMemberDisplay = currencyFormat.format(tipPerMember);
 
-        ((EditText) this.findViewById(R.id.out__tip_amt)).setText(tipTotalDisplay);
-        ((EditText) this.findViewById(R.id.out__tip_pmember)).setText(tipPerMemberDisplay);
+        ((EditText) this.findViewById(R.id.out__tip_amt)).setText("Tip Total: $" + tipTotalDisplay);
+        ((EditText) this.findViewById(R.id.out__tip_pmember)).setText("Tip per Person: $" + tipPerMemberDisplay);
     }
 
     public void requestTipCalculation(View v) {
